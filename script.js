@@ -21,6 +21,7 @@ class Carousel {
   close(event) {
     event.stopPropagation();
     this.carousel.classList.remove("active");
+
     if (this.indexActive !== 0) {
       this.images[this.indexActive].classList.remove("active");
       this.images[0].className = "active";

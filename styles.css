@@ -15,6 +15,10 @@ body {
   flex-direction: column;
 }
 
+body.active {
+  overflow-y: hidden;
+}
+
 main {
   flex: 3;
   padding: 10px;
@@ -27,22 +31,21 @@ section.my-work {
 
 .my-work > .cards {
   flex: 1;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
 }
 
 .card {
+  min-width: 200px;
+  min-height: 100px;
   flex: 1;
-  min-width: 33%;
 }
 
 .carousel {
   position: relative;
-  min-height: 100px;
-  max-height: 200px;
+  min-height: 200px;
   overflow: hidden;
-  inset: 0;
 }
 
 .carousel span {
@@ -62,6 +65,7 @@ section.my-work {
 }
 
 .carousel.active {
+  background-image: none !important;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   display: flex;
@@ -71,7 +75,6 @@ section.my-work {
   min-height: 100vh;
   top: 0;
   left: 0;
-  inset: 0;
   z-index: 1;
 }
 
@@ -100,4 +103,15 @@ section.my-work {
 footer {
   flex: 1;
   background: rgb(155, 59, 245);
+}
+@media (max-width: 700px) {
+  .my-work > .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .my-work > .cards {
+    grid-template-columns: 1fr;
+  }
 }
