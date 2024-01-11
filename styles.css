@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 3;
+  padding: 10px;
+}
+
+section.my-work {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-work > .cards {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  flex: 1;
+  min-width: 33%;
+}
+
+.carousel {
+  position: relative;
+  min-height: 100px;
+  max-height: 200px;
+  overflow: hidden;
+  inset: 0;
+}
+
+.carousel span {
+  position: absolute;
+  opacity: 0;
+}
+.carousel > img {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel > img.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.carousel.active {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  inset: 0;
+  z-index: 1;
+}
+
+.carousel.active > img {
+  max-width: 70%;
+}
+
+.carousel.active span {
+  color: white;
+  opacity: 1;
+}
+
+.carousel.active .left {
+  left: 10px;
+}
+
+.carousel.active .right {
+  right: 10px;
+}
+
+.carousel.active .close {
+  right: 5px;
+  top: 5px;
+}
+
+footer {
+  flex: 1;
+  background: rgb(155, 59, 245);
+}
