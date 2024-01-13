@@ -5,11 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gabriel Hernández</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
   </head>
   <body>
     <main>
-      <section class="me"></section>
+      <section class="me">
+        <div class="profile-container">
+          <img src="./images/gabriel_profilepic.jpg" alt="Gabriel Hernández" />
+        </div>
+
+        <section class="about-me">
+          <h2>About me</h2>
+          <p>
+            My name is Gabriel Hernández. I'm a programmer, focused on web
+            programming who's always looking to learn! I know javascript, css
+            and html, and want to keep learning more to build cooler things!
+          </p>
+        </section>
+      </section>
       <section class="my-work">
         <h2>My work</h2>
         <section class="cards">
@@ -24,7 +43,7 @@
               <img src="./images/blueprint_2.png" alt="" />
             </div>
             <section class="info">
-              <h3>blueprint</h3>
+              <h3>Blueprint</h3>
               <p>
                 Usage of DOM manipulation and local storage API in order to
                 create a TODO List, achieving data persistance localy for the
@@ -44,18 +63,22 @@
                 title="Click to see more images"
                 class="active"
                 src="./images/weatherapp_1.png"
-                alt=""
+                alt="Weather app weather by hour screenshot"
               />
-              <img src="./images/weatherapp_2.png" alt="" />
+              <img
+                src="./images/weatherapp_2.png"
+                alt="Weather app weather in the day screenshot"
+              />
               <img src="./images/weatherapp_3.png" alt="" />
             </div>
             <section class="info">
               <h3>WeatherApp</h3>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae,
-                sunt mollitia. Voluptatum consequuntur, laborum exercitationem
-                corrupti consequatur illo a cumque quibusdam doloribus ipsum
-                vitae fuga distinctio sequi animi? Alias, delectus?
+                This app gives you forecast of the weather up to three days for
+                your location or one entered by the user in the search bar.
+                thanks to the weather API (https://www.weatherapi.com/) Puts
+                into practice the fetching API and async await concepts, also
+                DOM manipulation in a tabbed UI for the info.
               </p>
             </section>
           </section>
@@ -69,18 +92,15 @@
               <img
                 title="Click to see more images"
                 class="active"
-                src="./images/blueprint_1.png"
-                alt="blueprint todolist screenshot"
+                src="./images/EtchASketch_1.png"
+                alt="blueprint todolist list todos screenshot"
               />
-              <img src="./images/blueprint_2.png" alt="" />
             </div>
             <section class="info">
-              <h3>blueprint</h3>
+              <h3>Etch-A-Sketch</h3>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae,
-                sunt mollitia. Voluptatum consequuntur, laborum exercitationem
-                corrupti consequatur illo a cumque quibusdam doloribus ipsum
-                vitae fuga distinctio sequi animi? Alias, delectus?
+                Shows DOM manipulation displaying a drawing board clicking and
+                hovering over the board makes the divs take a random color
               </p>
             </section>
           </section>
@@ -94,19 +114,13 @@
               <img
                 title="Click to see more images"
                 class="active"
-                src="./images/blueprint_1.png"
-                alt="blueprint todolist screenshot"
+                src="./images/landing_page1.png"
+                alt="Landing page screenshot"
               />
-              <img src="./images/blueprint_2.png" alt="" />
             </div>
             <section class="info">
-              <h3>blueprint</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae,
-                sunt mollitia. Voluptatum consequuntur, laborum exercitationem
-                corrupti consequatur illo a cumque quibusdam doloribus ipsum
-                vitae fuga distinctio sequi animi? Alias, delectus?
-              </p>
+              <h3>Landing page</h3>
+              <p>Page using flexbox to achieve a nice page layout.</p>
             </section>
           </section>
           <section class="card">
@@ -119,18 +133,15 @@
               <img
                 title="Click to see more images"
                 class="active"
-                src="./images/blueprint_1.png"
-                alt="blueprint todolist screenshot"
+                src="./images/Calculator_1.png"
+                alt="Calculator screenshot"
               />
-              <img src="./images/blueprint_2.png" alt="" />
             </div>
             <section class="info">
-              <h3>blueprint</h3>
+              <h3>Calculator</h3>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae,
-                sunt mollitia. Voluptatum consequuntur, laborum exercitationem
-                corrupti consequatur illo a cumque quibusdam doloribus ipsum
-                vitae fuga distinctio sequi animi? Alias, delectus?
+                Calculator with a retro look, you can perform the basic
+                arithmetic operations.
               </p>
             </section>
           </section>
@@ -163,16 +174,12 @@
       </section>
     </main>
     <footer>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perspiciatis
-      praesentium commodi. Minus accusamus incidunt rerum autem harum iste
-      voluptatem consequatur qui tenetur ratione quas odit, libero sunt
-      voluptates eaque? Ipsam reprehenderit molestiae quibusdam aliquam
-      voluptatum inventore voluptatibus blanditiis nobis corrupti, vel maxime,
-      alias veritatis provident eligendi, minus quos sapiente nesciunt cum nemo!
-      Ipsa, libero. Similique sunt magnam laborum explicabo! Neque quidem maxime
-      impedit quasi illum sequi explicabo ut dolorum excepturi voluptatibus eius
-      fuga, esse similique itaque natus voluptas quod praesentium saepe
-      exercitationem accusantium porro mollitia quis? Fugit, dolorum earum.
+      <h2>Contact me</h2>
+      <p>If you'd like to get in touch with me:</p>
+      <ul>
+        <li>+523320101695</li>
+        <li>gabrielhzgr@gmail.com</li>
+      </ul>
     </footer>
   </body>
 </html>
