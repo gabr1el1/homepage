@@ -43,7 +43,6 @@ h3 {
   font-weight: 400;
   font-style: normal;
   color: darkred;
-  color: darkslateblue;
 }
 section.me {
   position: relative;
@@ -173,13 +172,35 @@ footer {
   padding: 25px;
 }
 
-footer h2 {
+footer p {
+  margin-bottom: 8px;
+}
+
+footer h2,
+h3 {
   color: white;
+  margin-bottom: 10px;
 }
 
 footer ul {
   list-style-type: none;
   font-size: 14px;
+}
+
+footer ul li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 3px;
 }
 @media (max-width: 700px) {
   .my-work > .cards {
