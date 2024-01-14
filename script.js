@@ -29,6 +29,9 @@ class Carousel {
   }
   enableCarousel(event) {
     if (!this.carousel.classList.contains("active")) {
+      document.querySelectorAll(".card").forEach(function (card) {
+        card.setAttribute("style", "pointer-events: none");
+      });
       this.carousel.classList.add("active");
     }
   }
