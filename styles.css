@@ -6,7 +6,13 @@
 }
 :root {
   --shadow: 0px 3px 5px 2px grey;
+  --pointer-cards: all;
 }
+
+:root.active {
+  --pointer-cards: none;
+}
+
 body,
 html {
   min-width: 100vw;
@@ -85,7 +91,13 @@ section.my-work {
   gap: 10px;
 }
 
+span:hover {
+  transform: scale(2);
+  cursor: pointer;
+}
+
 .card {
+  pointer-events: var(--pointer-cards);
   min-width: 200px;
   min-height: 100px;
   flex: 1;
@@ -107,7 +119,9 @@ section.my-work {
   min-height: 200px;
   overflow: hidden;
 }
-
+.carousel > img.active {
+  opacity: 1;
+}
 .carousel span {
   position: absolute;
   opacity: 0;
@@ -116,46 +130,43 @@ section.my-work {
   position: absolute;
   width: 100%;
   opacity: 0;
-  pointer-events: none;
   border-radius: 10px 10px 0px 0px;
 }
-
-.carousel > img.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
 .carousel.active {
-  background-image: none !important;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  z-index: 2;
   inset: 0;
-  z-index: 1;
-}
-
-.carousel.active .card {
-  position: static;
-  pointer-events: none;
-}
-
-.carousel.active > img {
-  max-width: 70%;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .carousel.active span {
+  z-index: 3;
+  position: absolute;
+  pointer-events: all;
   color: white;
   opacity: 1;
+  transition: transform 0.5s ease;
+}
+
+.carousel.active span:hover {
+  transform: scale(1.5);
+}
+
+.carousel.active > img.active {
+  width: 80%;
 }
 
 .carousel.active .left {
   left: 10px;
+  top: 50%;
 }
 
 .carousel.active .right {
   right: 10px;
+  top: 50%;
 }
 
 .carousel.active .close {
