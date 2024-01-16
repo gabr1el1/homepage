@@ -29,7 +29,7 @@ body.active {
 .decoration {
   background: darkred;
   position: absolute;
-  z-index: 1;
+
   width: 110vw;
   height: 45vh;
   rotate: -10deg;
