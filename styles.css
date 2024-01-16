@@ -6,13 +6,7 @@
 }
 :root {
   --shadow: 0px 3px 5px 2px grey;
-  --pointer-cards: all;
 }
-
-:root.active {
-  --pointer-cards: none;
-}
-
 body,
 html {
   min-width: 100vw;
@@ -20,7 +14,7 @@ html {
 }
 
 body {
-  background-color: cornsilk;
+  background-color: da;
   display: flex;
   flex-direction: column;
   font-family: "Josefin Sans", sans-serif;
@@ -32,7 +26,20 @@ body.active {
   overflow-y: hidden;
 }
 
+.decoration {
+  background: darkred;
+  position: absolute;
+  z-index: 1;
+  width: 110vw;
+  height: 45vh;
+  rotate: -10deg;
+  top: -100px;
+  left: -30px;
+}
+
 main {
+  z-index: 1;
+  position: relative;
   flex: 3;
   padding: 10px;
 }
@@ -51,10 +58,8 @@ h3 {
   color: darkred;
 }
 section.me {
-  position: relative;
   display: flex;
   align-items: center;
-  border-bottom: thin solid lightgray;
   margin-bottom: 15px;
 }
 .profile-container {
@@ -69,7 +74,6 @@ section.me img {
 }
 
 section.me .about-me {
-  position: relative;
   left: -5px;
   box-shadow: var(--shadow);
   height: min-content;
@@ -77,6 +81,7 @@ section.me .about-me {
   padding-left: 15px;
   border-radius: 5px;
   color: rgb(44, 13, 2);
+  background-color: whitesmoke;
 }
 
 section.my-work {
@@ -91,37 +96,33 @@ section.my-work {
   gap: 10px;
 }
 
-span:hover {
-  transform: scale(2);
-  cursor: pointer;
-}
-
 .card {
-  pointer-events: var(--pointer-cards);
   min-width: 200px;
   min-height: 100px;
   flex: 1;
   box-shadow: var(--shadow);
   border-radius: 10px;
   transition: transform 0.4s ease;
-  position: relative;
   background: whitesmoke;
   color: rgb(22, 17, 55);
 }
 
+:root.active .card {
+  pointer-events: none;
+  transform: none;
+}
+
 .card:hover {
   transform: scale(1.1);
-  z-index: 1;
 }
 
 .carousel {
   position: relative;
   min-height: 200px;
   overflow: hidden;
+  transition: all 0.5s ease;
 }
-.carousel > img.active {
-  opacity: 1;
-}
+
 .carousel span {
   position: absolute;
   opacity: 0;
@@ -130,43 +131,55 @@ span:hover {
   position: absolute;
   width: 100%;
   opacity: 0;
+  pointer-events: none;
   border-radius: 10px 10px 0px 0px;
+  transition: opacity 0.5s ease;
 }
+
+.carousel > img.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .carousel.active {
+  pointer-events: none;
+  background-image: none !important;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  z-index: 2;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.carousel.active .card {
+  position: static;
+  pointer-events: none;
+}
+
+.carousel.active > img {
+  max-width: 70%;
 }
 
 .carousel.active span {
-  z-index: 3;
-  position: absolute;
-  pointer-events: all;
   color: white;
+  pointer-events: all;
   opacity: 1;
   transition: transform 0.5s ease;
 }
 
 .carousel.active span:hover {
+  cursor: pointer;
   transform: scale(1.5);
-}
-
-.carousel.active > img.active {
-  width: 80%;
 }
 
 .carousel.active .left {
   left: 10px;
-  top: 50%;
 }
 
 .carousel.active .right {
   right: 10px;
-  top: 50%;
 }
 
 .carousel.active .close {
