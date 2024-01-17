@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: da;
+  background-color: floralwhite;
   display: flex;
   flex-direction: column;
   font-family: "Josefin Sans", sans-serif;
@@ -60,7 +60,7 @@ h3 {
 section.me {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 45px;
 }
 .profile-container {
   width: 250px;
@@ -74,6 +74,7 @@ section.me img {
 }
 
 section.me .about-me {
+  position: relative;
   left: -5px;
   box-shadow: var(--shadow);
   height: min-content;
@@ -237,5 +238,14 @@ footer a {
 @media (max-width: 500px) {
   .my-work > .cards {
     grid-template-columns: 1fr;
+  }
+  section.me {
+    flex-direction: column;
+    .profile-container {
+      width: 130px;
+    }
+    .about-me {
+      top: -5px;
+    }
   }
 }
