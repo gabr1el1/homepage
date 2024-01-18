@@ -20,6 +20,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: bolder;
+  overflow-x: hidden;
 }
 
 body.active {
