@@ -30,7 +30,6 @@ body.active {
 .decoration {
   background: darkred;
   position: absolute;
-
   width: 4000px;
   height: 400px;
   rotate: -10deg;
@@ -71,13 +70,13 @@ section.me img {
   z-index: 1;
   max-width: 100%;
   border-radius: 5px;
-  box-shadow: var(--shadow);
+  box-shadow: 5px 3px 17px black;
 }
 
 section.me .about-me {
   position: relative;
   left: -5px;
-  box-shadow: var(--shadow);
+  box-shadow: 5px 3px 30px black;
   height: min-content;
   padding: 10px;
   padding-left: 15px;
